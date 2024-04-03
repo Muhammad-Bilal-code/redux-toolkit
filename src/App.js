@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 // import counterReducer from "./redux/slices/counter";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +7,7 @@ import {
   incrementByAmount,
 } from "./redux/slices/counter";
 import CounterValue from "./counterValue";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   const count = useSelector((state) => state.counter.value);
@@ -21,6 +21,8 @@ function App() {
       <button onClick={() => dispatch(decrement())}>dec</button>
       <button onClick={() => dispatch(incrementByAmount(5))}>Amont 5</button>
       <CounterValue />
+
+      <AddTodo />
     </div>
   );
 }
